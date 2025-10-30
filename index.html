@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Wellness Platform</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Link Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen">
+
+    <!-- 
+        ============================================================
+        1. LANDING PAGE SECTION (Home / Attractive Website Front) 
+        ============================================================
+    -->
+    <section id="landing-page" class="page-section active flex-col">
+        
+        <!-- Header / Nav for Landing Page -->
+        <header class="w-full bg-white shadow-md z-10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+                <!-- Logo -->
+                <h1 class="text-2xl font-bold primary-text flex items-center">
+                    <i data-lucide="leaf" class="w-6 h-6 mr-2"></i>
+                    AyurWell
+                </h1>
+                <!-- Login Button -->
+                <button id="open-login-modal-btn" class="px-6 py-2 bg-emerald-500 text-white font-semibold rounded-full hover:bg-emerald-600 transition duration-300 shadow-md">
+                    Login / Get Started
+                </button>
+            </div>
+        </header>
+        
+        <div class="hero-section flex-grow pt-16 pb-12 md:pt-24 md:pb-16 relative overflow-hidden" 
+    style="background-color: #f7fffb; background-image: url('Gemini_Generated_Image_pst32lpst32lpst3.png'); background-size: cover; background-position: center;">
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <div class="order-2 lg:order-1 flex justify-center">
+                <div class="p-4 bg-white rounded-xl shadow-2xl relative border-4 border-white w-full max-w-lg" style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15), 0 0 0 4px white;">
+                    
+                    <img src="Gemini_Generated_Image_hmkygthmkygthmky.png" 
+                         alt="Ayurvedic herbs and spices in a mortar" 
+                         class="rounded-lg w-full h-auto"
+                         onerror="this.onerror=null; this.src='https://placehold.co/450x300/F0FDF4/10B981?text=Ayurvedic+Herbs+Placeholder'">
+                    
+                    </div>
+            </div>
+            
+            <div class="order-1 lg:order-2 text-center lg:text-left">
+                <span class="text-sm font-semibold uppercase tracking-wider" style="color: #F97316;">
+                    ANCIENT WISDOM, MODERN WELLNESS
+                </span>
+                
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mt-2 mb-4 leading-tight" style="color: #212529;">
+                    Personalized Path to <span style="color: #10B981;">Dosha Harmony</span>
+                </h2>
+                
+                <p class="text-lg mb-8 max-w-md lg:max-w-none mx-auto lg:mx-0" style="color: #495057;">
+                    Determine your unique **Prakriti (Vata, Pitta, Kapha)** and receive daily diet, routine, and lifestyle recommendations tailored just for you.
+                </p>
+                
+                <a href="#prakriti-quiz" class="inline-flex items-center justify-center px-10 py-4 text-white text-lg font-bold rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105" 
+                   style="background-image: linear-gradient(to right, #10B981, #34D399);">
+                    Start Your Free Prakriti Analysis
+                    <i data-lucide="leaf" class="w-5 h-5 ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        
+        <div class="bg-white p-6 rounded-xl card-shadow text-center transform hover:translate-y-[-4px] transition duration-300 border-t-4 border-indigo-400 flex flex-col h-full">
+            <i data-lucide="feather" class="w-8 h-8 text-indigo-500 mx-auto mb-3"></i>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Vata Harmony (Air)</h3>
+            <p class="text-gray-500 text-sm flex-grow mb-0 text-center">
+                Guidance on Grounding: Personalized recommendations for warmth, routine, and calming practices to balance Vata's light and mobile energy.
+            </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl card-shadow text-center transform hover:translate-y-[-4px] transition duration-300 border-t-4 border-red-500 flex flex-col h-full">
+            <i data-lucide="sun" class="w-8 h-8 text-red-500 mx-auto mb-3"></i>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Pitta Balance (Fire)</h3>
+            <p class="text-gray-500 text-sm flex-grow mb-0 text-center">
+                Guidance on Cooling: Lifestyle tips and dietary advice focused on moderation, sweetness, and release to soothe Pitta's intense and fiery nature.
+            </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl card-shadow text-center transform hover:translate-y-[-4px] transition duration-300 border-t-4 border-green-600 flex flex-col h-full">
+            <i data-lucide="mountain" class="w-8 h-8 text-green-600 mx-auto mb-3"></i>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Kapha Activation (Earth)</h3>
+            <p class="text-gray-500 text-sm flex-grow mb-0 text-center">
+                Guidance on Stimulation: Focus on warmth, movement, and light, spicy foods to counteract Kapha's heavy, cool, and stagnant tendencies.
+            </p>
+        </div>
+    </div>
+</div>
+        <!-- Footer (Simple) -->
+        <footer class="w-full bg-gray-100 py-6 mt-auto">
+            <div class="container mx-auto px-4 text-center text-sm text-gray-500">
+                &copy; 2025 AyurWell. All rights reserved. | <a href="#" class="hover:primary-text">Privacy Policy</a>
+            </div>
+        </footer>
+
+    </section>
+
+    <!-- 
+        ============================================================
+        2. APPLICATION DASHBOARD SECTION (The core features) 
+        ============================================================
+    -->
+    <section id="dashboard-page" class="page-section">
+        
+        <!-- Sidebar / Mobile Navigation (Static) -->
+        <div id="sidebar" class="fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition-transform duration-200 ease-in-out bg-white w-64 p-4 flex flex-col z-30 card-shadow md:shadow-none flex-shrink-0">
+            
+            <!-- Logo and Close Button for Mobile -->
+            <div class="flex justify-between items-center mb-10">
+                <h1 class="text-2xl font-bold primary-text flex items-center">
+                    <i data-lucide="leaf" class="w-6 h-6 mr-2"></i>
+                    AyurWell
+                </h1>
+                <button id="close-sidebar" class="md:hidden p-2 rounded-full hover:bg-gray-100">
+                    <i data-lucide="x" class="w-6 h-6 text-gray-700"></i>
+                </button>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="flex-grow space-y-2">
+                <a href="#" data-section="dashboard-content" class="nav-item active flex items-center p-3 rounded-lg text-gray-600 hover:bg-green-50 hover:primary-text transition duration-150">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5 mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="#" data-section="prakriti" class="nav-item flex items-center p-3 rounded-lg text-gray-600 hover:bg-green-50 hover:primary-text transition duration-150">
+                    <i data-lucide="heart-handshake" class="w-5 h-5 mr-3"></i>
+                    Prakriti Analysis
+                </a>
+                <a href="#" data-section="diet" class="nav-item flex items-center p-3 rounded-lg text-gray-600 hover:bg-green-50 hover:primary-text transition duration-150">
+                    <i data-lucide="salad" class="w-5 h-5 mr-3"></i>
+                    Diet Chart
+                </a>
+                <a href="#" data-section="schedule" class="nav-item flex items-center p-3 rounded-lg text-gray-600 hover:bg-green-50 hover:primary-text transition duration-150">
+                    <i data-lucide="calendar-check" class="w-5 h-5 mr-3"></i>
+                    Daily Schedule
+                </a>
+                <a href="#" data-section="followups" class="nav-item flex items-center p-3 rounded-lg text-gray-600 hover:bg-green-50 hover:primary-text transition duration-150">
+                    <i data-lucide="history" class="w-5 h-5 mr-3"></i>
+                    Progress & Follow-ups
+                </a>
+            </nav>
+
+            <!-- Profile/Settings (Bottom) -->
+            <div class="mt-8 pt-4 border-t border-gray-100">
+                <a href="#" data-section="profile" class="nav-item flex items-center p-3 rounded-lg text-gray-600 hover:bg-green-50 hover:primary-text transition duration-150">
+                    <i data-lucide="user" class="w-5 h-5 mr-3"></i>
+                    User Profile
+                </a>
+                <a href="#" data-section="admin" class="nav-item flex items-center p-3 rounded-lg text-gray-600 hover:bg-green-50 hover:primary-text transition duration-150">
+                    <i data-lucide="cog" class="w-5 h-5 mr-3"></i>
+                    Admin Panel
+                </a>
+                <a href="#" id="nav-to-landing" class="flex items-center p-3 rounded-lg text-red-500 hover:bg-red-50 mt-2 transition duration-150">
+                    <i data-lucide="log-out" class="w-5 h-5 mr-3"></i>
+                    Logout (Go Home)
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content Area (Scrollable) -->
+        <main class="flex-1 p-4 md:p-8 overflow-y-auto">
+            
+            <!-- Top Bar for Mobile -->
+            <header class="flex justify-between items-center mb-6 md:hidden">
+                <h2 class="text-xl font-semibold primary-text">AyurWell Dashboard</h2>
+                <button id="open-sidebar" class="p-2 rounded-full hover:bg-gray-100">
+                    <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
+                </button>
+            </header>
+
+
+            <!-- 1. Dashboard Section Content -->
+            <section id="dashboard-content" class="content-section active">
+                <h1 class="text-3xl md:text-4xl font-extrabold mb-6 text-gray-800">Welcome, Jane Doe!</h1>
+                <p class="mb-8 text-lg text-gray-600">Your personalized path to Ayurvedic wellness starts here. Today's primary focus is maintaining your Kapha balance.</p>
+
+                <!-- Key Metrics Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                    <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-emerald-500">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-gray-500">Your Prakriti</p>
+                            <i data-lucide="dna" class="w-6 h-6 primary-text"></i>
+                        </div>
+                        <p class="text-3xl font-bold mt-2 text-gray-800">Kapha Dominant</p>
+                        <p class="text-sm text-gray-400 mt-1">Last Analysis: 2 days ago</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-amber-700">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-gray-500">Daily Goal</p>
+                            <i data-lucide="clock" class="w-6 h-6 secondary-text"></i>
+                        </div>
+                        <p class="text-3xl font-bold mt-2 text-gray-800">80% Complete</p>
+                        <p class="text-sm text-gray-400 mt-1">Schedule followed today</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl card-shadow border-t-4 border-indigo-500">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-gray-500">Next Follow-up</p>
+                            <i data-lucide="bell" class="w-6 h-6 text-indigo-500"></i>
+                        </div>
+                        <p class="text-3xl font-bold mt-2 text-gray-800">10:00 AM</p>
+                        <p class="text-sm text-gray-400 mt-1">Morning Meditation Reminder</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div class="bg-white p-6 rounded-xl card-shadow">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-700">Today's Diet Tip</h3>
+                        <p class="text-gray-600 mb-4">Focus on light, dry, and warm foods to pacify Kapha. A simple ginger tea is recommended after lunch.</p>
+                        <button class="px-4 py-2 bg-emerald-500 text-white rounded-lg hover:bg-emerald-600 transition">View Full Diet</button>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl card-shadow">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-700">Quick Prakriti Check</h3>
+                        <p class="text-gray-600 mb-4">Feeling balanced? Take a quick, 5-question check-in to adjust your schedule.</p>
+                        <button id="quick-prakriti-check-btn" class="px-4 py-2 border border-emerald-500 primary-text rounded-lg hover:bg-emerald-50 transition hover:text-white hover:bg-emerald-500">Start Check-in</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Prakriti Analysis Section -->
+            <section id="prakriti" class="content-section">
+                <h1 class="text-3xl font-bold mb-8 text-gray-800">Prakriti Analysis: Your Ayurvedic Constitution</h1>
+                <div id="prakriti-results" class="bg-white p-8 rounded-xl card-shadow prakriti-view active">
+                    <h2 class="text-2xl font-semibold primary-text mb-4">Your Current Dosha Profile</h2>
+                    <p class="text-gray-600 mb-6">Based on your last assessment (Kapha Dominant), here is your constitution. Retake the analysis below if your state feels significantly different.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                        <div class="p-6 rounded-lg bg-red-50 border-2 border-red-300">
+                            <h3 class="text-xl font-bold text-red-600">Vata (Air & Ether)</h3>
+                            <p class="text-4xl font-extrabold my-2 text-red-800">25%</p>
+                            <p class="text-sm text-red-500">Movement & Energy</p>
+                        </div>
+                        <div class="p-6 rounded-lg bg-yellow-50 border-2 border-yellow-300">
+                            <h3 class="text-xl font-bold text-yellow-600">Pitta (Fire & Water)</h3>
+                            <p class="text-4xl font-extrabold my-2 text-yellow-800">35%</p>
+                            <p class="text-sm text-yellow-500">Transformation & Metabolism</p>
+                        </div>
+                        <div class="p-6 rounded-lg bg-green-50 border-2 border-green-300">
+                            <h3 class="text-xl font-bold text-green-600">Kapha (Earth & Water)</h3>
+                            <p class="text-4xl font-extrabold my-2 text-green-800">40%</p>
+                            <p class="text-sm text-green-500">Structure & Lubrication</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 flex justify-end">
+                        <button id="start-full-analysis-btn" class="px-6 py-3 bg-emerald-500 text-white rounded-full font-semibold hover:bg-emerald-600 transition">
+                            Start Full Analysis
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Prakriti Questionnaire - Hidden by default -->
+                <div id="prakriti-questionnaire" class="bg-white p-8 rounded-xl card-shadow prakriti-view" style="display:none;">
+                    <h2 class="text-2xl font-semibold text-gray-700 mb-6">Full Prakriti Assessment (Step <span id="current-step">1</span> of 3)</h2>
+                    
+                    <!-- Progress Bar -->
+                    <div class="mb-8 w-full bg-gray-200 rounded-full h-2.5">
+                        <div id="prakriti-progress" class="primary-bg h-2.5 rounded-full" style="width: 33%"></div>
+                    </div>
+
+                    <!-- Step 1: Physical Attributes -->
+                    <div class="prakriti-step" data-step="1">
+                        <h3 class="text-xl font-bold primary-text mb-4">Step 1: Physical and Body Traits</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-1">How would you describe your body frame?</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg">
+                                    <option>Thin, light, difficulty gaining weight (Vata)</option>
+                                    <option>Medium, athletic, well-proportioned (Pitta)</option>
+                                    <option selected>Large, strong, tendency to gain weight (Kapha)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-1">What is your typical skin condition?</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg">
+                                    <option>Dry, rough, easily cold (Vata)</option>
+                                    <option>Oily, sensitive, prone to rashes/acne (Pitta)</option>
+                                    <option selected>Smooth, thick, cool, pale (Kapha)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Mental and Emotional Traits -->
+                    <div class="prakriti-step" data-step="2" style="display:none;">
+                        <h3 class="text-xl font-bold primary-text mb-4">Step 2: Mental and Emotional Traits</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-1">How do you learn and remember information?</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg">
+                                    <option>Quick to grasp, quick to forget (Vata)</option>
+                                    <option>Sharp, focused, good recall (Pitta)</option>
+                                    <option selected>Slow to grasp, excellent long-term memory (Kapha)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-1">How do you typically react to stress?</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg">
+                                    <option>Anxiety, fear, restlessness (Vata)</option>
+                                    <option selected>Anger, irritability, frustration (Pitta)</option>
+                                    <option>Withdrawal, lethargy, holding on (Kapha)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Digestion and Lifestyle -->
+                    <div class="prakriti-step" data-step="3" style="display:none;">
+                        <h3 class="text-xl font-bold primary-text mb-4">Step 3: Digestion and Lifestyle</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-1">Describe your hunger/appetite.</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg">
+                                    <option>Irregular, variable, sometimes skip meals (Vata)</option>
+                                    <option selected>Strong, intense, cannot miss a meal (Pitta)</option>
+                                    <option>Slow, consistent, can skip meals easily (Kapha)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 font-medium mb-1">How do you prefer the climate?</label>
+                                <select class="w-full p-2 border border-gray-300 rounded-lg">
+                                    <option>Prefer hot and humid, hate cold (Vata)</option>
+                                    <option>Prefer cool, hate intense heat (Pitta)</option>
+                                    <option>Prefer warm and dry, hate damp/cold (Kapha)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="mt-8 flex justify-between">
+                        <button id="prev-step-btn" class="px-6 py-2 border border-gray-300 text-gray-700 rounded-full hover:bg-gray-100 transition" disabled>
+                            <i data-lucide="arrow-left" class="w-4 h-4 inline mr-1"></i> Previous
+                        </button>
+                        <button id="next-step-btn" class="px-6 py-2 bg-emerald-500 text-white rounded-full font-semibold hover:bg-emerald-600 transition">
+                            Next <i data-lucide="arrow-right" class="w-4 h-4 inline ml-1"></i>
+                        </button>
+                        <button id="submit-analysis-btn" class="px-6 py-2 primary-bg text-white rounded-full font-semibold hover:bg-emerald-600 transition" style="display:none;">
+                            Submit & View Results
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Diet Chart Section -->
+            <section id="diet" class="content-section">
+                <h1 class="text-3xl font-bold mb-8 text-gray-800">Personalized Kapha-Pacifying Diet Chart</h1>
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <!-- Day Selector Tabs -->
+                    <div class="flex space-x-2 border-b border-gray-200 mb-6">
+                        <button class="py-2 px-4 border-b-2 border-emerald-500 primary-text font-semibold">Today (Thursday)</button>
+                        <button class="py-2 px-4 text-gray-500 hover:text-gray-700">Friday</button>
+                        <button class="py-2 px-4 text-gray-500 hover:text-gray-700">Saturday</button>
+                    </div>
+
+                    <!-- Meal Plan Table/Cards -->
+                    <div class="space-y-4">
+                        <!-- Meal Card: Breakfast -->
+                        <div class="p-4 border rounded-lg hover:bg-gray-50 transition duration-150">
+                            <h3 class="text-xl font-bold primary-text">Breakfast (7:30 AM)</h3>
+                            <p class="text-gray-700 mt-1">Lightly steamed apples with cinnamon and honey. Avoid dairy.</p>
+                            <span class="text-sm secondary-text font-medium">Keywords: Warm, Dry, Light, Stimulating</span>
+                        </div>
+
+                        <!-- Meal Card: Lunch -->
+                        <div class="p-4 border rounded-lg hover:bg-gray-50 transition duration-150">
+                            <h3 class="text-xl font-bold primary-text">Lunch (12:30 PM)</h3>
+                            <p class="text-gray-700 mt-1">Moong dal (lentil) soup with mixed bitter vegetables (e.g., kale, arugula). Whole wheat roti.</p>
+                            <span class="text-sm secondary-text font-medium">Keywords: Pungent, Astringent, Bitter</span>
+                        </div>
+
+                        <!-- Meal Card: Dinner -->
+                        <div class="p-4 border rounded-lg hover:bg-gray-50 transition duration-150">
+                            <h3 class="text-xl font-bold primary-text">Dinner (6:30 PM)</h3>
+                            <p class="text-gray-700 mt-1">Small serving of quinoa with ginger and black pepper. Must be eaten early and light.</p>
+                            <span class="text-sm secondary-text font-medium">Keywords: Very Light, Early, Warm</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex justify-end">
+                        <button class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition">Download Full PDF</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Daily Schedule Section -->
+            <section id="schedule" class="content-section">
+                <h1 class="text-3xl font-bold mb-8 text-gray-800">Your Daily Ayurvedic Routine (Dinacharya)</h1>
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <!-- Timeline List -->
+                    <ol class="relative border-l border-gray-200">                  
+                        <!-- Event 1: Brahma Muhurta -->
+                        <li class="mb-8 ml-6">
+                            <span class="absolute flex items-center justify-center w-3 h-3 bg-emerald-500 rounded-full -left-1.5 ring-8 ring-white"></span>
+                            <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">Wake Up & Rituals <span class="bg-emerald-100 text-emerald-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3">Key</span></h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-400">5:30 AM (Brahma Muhurta)</time>
+                            <p class="text-base font-normal text-gray-500">Tongue scraping, oil pulling, and warm water with lemon to cleanse.</p>
+                        </li>
+                        <!-- Event 2: Exercise -->
+                        <li class="mb-8 ml-6">
+                            <span class="absolute flex items-center justify-center w-3 h-3 bg-amber-500 rounded-full -left-1.5 ring-8 ring-white"></span>
+                            <h3 class="mb-1 text-lg font-semibold text-gray-900">Movement & Exercise</h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-400">6:00 AM - 7:00 AM</time>
+                            <p class="text-base font-normal text-gray-500">Vigorous, stimulating exercise (e.g., running, sun salutations) to counter Kapha stagnation.</p>
+                        </li>
+                        <!-- Event 3: Lunch -->
+                        <li class="mb-8 ml-6">
+                            <span class="absolute flex items-center justify-center w-3 h-3 bg-emerald-500 rounded-full -left-1.5 ring-8 ring-white"></span>
+                            <h3 class="mb-1 text-lg font-semibold text-gray-900">Main Meal (Lunch)</h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-400">12:30 PM</time>
+                            <p class="text-base font-normal text-gray-500">Eat the largest and most satisfying meal when digestive fire (Agni) is strongest.</p>
+                        </li>
+                        <!-- Event 4: Sleep -->
+                        <li class="mb-8 ml-6">
+                            <span class="absolute flex items-center justify-center w-3 h-3 bg-indigo-500 rounded-full -left-1.5 ring-8 ring-white"></span>
+                            <h3 class="mb-1 text-lg font-semibold text-gray-900">Sleep</h3>
+                            <time class="block mb-2 text-sm font-normal leading-none text-gray-400">10:00 PM</time>
+                            <p class="text-base font-normal text-gray-500">Ensure consistent bedtime for optimal Pitta pacification and Kapha balance.</p>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- 5. Follow-ups & Progress Tracking Section -->
+            <section id="followups" class="content-section">
+                <h1 class="text-3xl font-bold mb-8 text-gray-800">Progress and Follow-ups (Routine Compliance)</h1>
+                <div class="bg-white p-6 rounded-xl card-shadow">
+                    <h2 class="text-xl font-semibold text-gray-700 mb-4">Last 5 Days Routine Compliance</h2>
+                    
+                    <!-- Compliance Table -->
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Routine Followed</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Compliance Score</th>
+                                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Feedback</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr class="hover:bg-green-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Today</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Morning Rituals, Exercise, Lunch</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-emerald-600 font-semibold">80%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Missed evening meditation.</td>
+                                </tr>
+                                <tr class="hover:bg-green-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Yesterday</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">All tasks completed.</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-green-600 font-semibold">100%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Excellent day!</td>
+                                </tr>
+                                <tr class="hover:bg-green-50">
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Mon, Oct 27</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-600">Missed Exercise, Late Dinner</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-red-600 font-semibold">55%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Focus on morning routine.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h2 class="text-xl font-semibold text-gray-700 mb-4">Log Today's Compliance</h2>
+                        <button id="log-compliance-btn" class="px-6 py-3 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition">
+                            Open Compliance Logger
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 6. User Profile Section -->
+            <section id="profile" class="content-section">
+                <h1 class="text-3xl font-bold mb-8 text-gray-800">User Profile & Health Details</h1>
+                <div class="bg-white p-8 rounded-xl card-shadow">
+                    <form id="profile-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" id="name" value="Jane Doe" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 p-2 border">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" value="jane.doe@example.com" disabled class="mt-1 block w-full rounded-md bg-gray-50 border-gray-300 shadow-sm p-2 border">
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div>
+                                <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+                                <input type="number" id="age" value="34" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 p-2 border">
+                            </div>
+                            <div>
+                                <label for="height" class="block text-sm font-medium text-gray-700">Height (cm)</label>
+                                <input type="number" id="height" value="165" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 p-2 border">
+                            </div>
+                            <div>
+                                <label for="weight" class="block text-sm font-medium text-gray-700">Weight (kg)</label>
+                                <input type="number" id="weight" value="70" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 p-2 border">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="concerns" class="block text-sm font-medium text-gray-700">Primary Health Concerns</label>
+                            <textarea id="concerns" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 p-2 border">Seasonal allergies, occasional sluggishness.</textarea>
+                            <p class="text-xs text-gray-500 mt-1">This information is used to refine your Dosha balance.</p>
+                        </div>
+
+                        <div class="pt-4 border-t border-gray-100">
+                            <button type="submit" class="px-6 py-3 bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 transition">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+
+            <!-- 7. Admin Panel Section (Placeholder) -->
+            <section id="admin" class="content-section">
+                <h1 class="text-3xl font-bold mb-8 text-gray-800">Admin Management Panel</h1>
+                <div class="bg-white p-8 rounded-xl card-shadow">
+                    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Student & Follow-up Management</h2>
+                    <p class="text-gray-600 mb-6">This section is for managing all users, reviewing their progress, and scheduling expert follow-ups. You would typically use secure routing to protect this area.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 border rounded-lg hover:bg-gray-50">
+                            <p class="text-2xl font-bold primary-text">1,245</p>
+                            <p class="text-gray-500">Total Registered Users</p>
+                        </div>
+                        <div class="p-4 border rounded-lg hover:bg-gray-50">
+                            <p class="text-2xl font-bold text-red-500">18</p>
+                            <p class="text-gray-500">Pending Follow-up Requests</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6">
+                        <button class="px-4 py-2 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 transition">View Full User List</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </section>
+
+    <!-- 
+        ============================================================
+        3. MODAL COMPONENTS (Custom Popups for Login and Status)
+        ============================================================
+    -->
+    
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="bg-white p-8 rounded-xl card-shadow w-full max-w-md mx-4 transform transition duration-300 scale-100">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold primary-text">User Login</h2>
+                <button class="close-modal-btn p-1 rounded-full hover:bg-gray-100">
+                    <i data-lucide="x" class="w-6 h-6 text-gray-600"></i>
+                </button>
+            </div>
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label for="login-email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="login-email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 p-2 border">
+                </div>
+                <div>
+                    <label for="login-password" class="block text-sm font-medium text-gray-700">Password</label>
+                    <input type="password" id="login-password" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-emerald-500 focus:ring-emerald-500 p-2 border">
+                </div>
+                <button type="submit" class="w-full py-3 bg-emerald-500 text-white rounded-lg font-semibold hover:bg-emerald-600 transition">
+                    Log In
+                </button>
+                <p class="text-xs text-gray-500 text-center pt-2">Use any email/password to simulate successful login.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Status/Validation Message Modal -->
+    <div id="status-modal" class="modal-overlay">
+        <div class="bg-white p-8 rounded-xl card-shadow w-full max-w-sm mx-4 text-center transform transition duration-300 scale-100">
+            <i id="status-icon" class="w-12 h-12 mx-auto mb-4 text-emerald-500"></i>
+            <h3 id="status-title" class="text-xl font-bold mb-2 text-gray-800"></h3>
+            <p id="status-message" class="text-gray-600 mb-6"></p>
+            <button class="close-modal-btn w-full py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- Link the JavaScript file at the end of the body for best performance -->
+    <script src="script.js"></script>
+</body>
+</html>

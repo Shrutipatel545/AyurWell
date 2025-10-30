@@ -1,0 +1,83 @@
+/* * Custom Stylesheet for Ayurvedic Wellness Platform
+ * Linked from index.html
+ */
+
+/* Custom Color Variables (Used by Tailwind classes in HTML) */
+:root {
+    --color-primary: #10B981; /* Emerald 500 - Main Green */
+    --color-secondary: #D97706; /* Amber 700 - Accent Brown/Gold */
+    --color-background: #F8FAF5; /* Off-white/Mint background */
+    --color-card: #FFFFFF;
+}
+
+/* Applying Inter Font and custom colors */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+}
+
+/* Custom class mapping to variables */
+.primary-bg { background-color: var(--color-primary); }
+.primary-text { color: var(--color-primary); }
+.secondary-text { color: var(--color-secondary); }
+.card-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06); }
+
+/* Utility for Active Menu Item */
+.nav-item.active {
+    color: var(--color-primary);
+    font-weight: 600;
+    border-left: 4px solid var(--color-primary);
+}
+
+/* Hide content sections by default, manage visibility via JavaScript */
+.page-section {
+    display: none;
+    min-height: 100vh;
+}
+
+.page-section.active {
+    display: flex; /* For the dashboard structure */
+}
+
+/* Custom styling to emulate the background art/texture from the image */
+.hero-section {
+    background-color: #f7f7f5; /* Light cream */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path fill="%23bbf7d0" d="M0 0h100v100H0z"/><path fill="%234ade80" d="M100 0L0 100V0z"/></svg>');
+    background-size: 500px;
+    background-repeat: repeat;
+}
+
+/* Ensure the dashboard itself is full screen when active */
+#dashboard-page {
+    display: none;
+    flex-direction: row;
+}
+#dashboard-page.active {
+    display: flex;
+}
+
+/* This hides all dashboard content containers until activated by JS */
+.content-section {
+    display: none;
+}
+
+.content-section.active {
+    display: block;
+}
+
+/* Modal Styles are kept here for separation */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+.modal-overlay.active {
+    display: flex;
+}
